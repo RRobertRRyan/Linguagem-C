@@ -1,15 +1,34 @@
 #include <stdio.h>
 
-main() {
-   double num;
-   
-   printf("Digite um numero --> ");
-   scanf("%lf", &num);
-   
-   
-   for (; num >= 1; num /= 2);
-   
-   printf("O resultado da ultima divisao e: %lf\n", num);
-   
-   return 0;
+int main() {
+	float salario1, salario2, salario3;
+	float maior, menor, diferenca_percentual;
+	
+	// Leitura dos salários 
+	printf("Digite o salario da primeira pessoa: ");
+	scanf("%f", &salario1);
+	
+	printf("Digite o salario da segunda pessoa: ");
+	scanf("%f", &salario2);
+	
+	printf("Digite o salario da terceira pessoa: ");
+	scanf("%f", &salario3);
+	
+	// Determinando o menor salário 
+	menor = salario1;
+	if(salario2 < menor) {
+		menor = salario2;
+	}
+	if(salario3 < menor) {
+		menor = salario3;
+	}
+	
+	// Calculando a diferença percentual 
+	diferenca_percentual = ((maior - menor) / menor) * 100;
+	
+	// Exibindo os resultados
+	printf("O maior salario e: %.2f\n", maior);
+	printf("A diferenca percentual entre o maior e o menor salario e: %.2f%%\n", diferenca_percentual);
+	
+	return 0;
 }
