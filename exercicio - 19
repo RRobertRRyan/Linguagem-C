@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+main() {
+	int num, soma = 0;
+	
+	printf("Digite o numero (0 para sair): ");
+	scanf("%d", &num);
+	
+	for (; num != 0;) {
+		if (num < 0) {
+			soma += num;
+		}
+		printf("Digite um numero (0 para sair): ");
+		scanf("%d", &num);
+	}
+    
+    printf("Somatória dos números negativos: %d\n", soma);
+    
+    return 0;
+    
+    
+}
