@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+	int potencia;
+	
+	printf("potencias de 2, de 2^0 ate 2^10:\n");
+	
+	for (int i = 0; i <= 10; i++) {
+		potencia = (int) pow(2, i); // Calcula 2^i usando a função pow e converte para inteiro 
+		printf("2^%d = %d\n", i, potencia);
+	}
+	
+	return 0;
+	
+}
